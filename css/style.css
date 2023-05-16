@@ -1,0 +1,19 @@
+#box_1 {
+    background-color: #ff00ff;
+}
+
+#box-content {
+    /* style card event box */
+}
+
+.event {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .event:hover {
+    background-color: #c1c1c1;
+  }
+  
+
