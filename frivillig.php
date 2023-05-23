@@ -1,5 +1,5 @@
 <?php 
-// Template Name: About Us // 
+// Template Name: Frivillig // 
 get_header();
 ?>
 
@@ -14,7 +14,6 @@ endif;
 
 <?php get_footer(); ?>
 
-<!-- CSS -->
 
 <style>
 
@@ -41,36 +40,22 @@ h1 {
     align-items: center;
 }
 
-.img-text-box .wp-container-3 {
-    display: flex;
-    justify-content: center;
-    align-items: center!important;
-}
-
 .image-box {
     width: 50vw;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem 100px;
-    height: 100%;
 }
 
 .image {
-    height: fit-content;
-    margin: 0;
-}
-
-.image img {
-    max-height: 50vh;
-    width: auto;
+    max-height: 75vh; 
 }
 
 .text-area {
     width: 50vw;
     padding: 1rem 100px;
     color: #f2f2f2;
-    height: fit-content;
 }
 
 .text-box-headline {
@@ -83,51 +68,54 @@ h1 {
 
 }
 
-.text-area p {
-    padding-bottom: 1.2rem;
-}
-
-.about-columns {
+.column-box {
     margin: 6rem 100px;
-    background-color: #464646;
-    border: #1e1e1e 5px solid;  
+    height: fit-content;
+    display: flex!important;
+    align-items: center!important;
 }
 
-.about-contact-column {
-    padding: 1rem 5rem;
-    color: #f2f2f2;
-}
-
-.contact-form-column {
+.contact-box {
     background-color: #1e1e1e;
-    color: #f2f2f2;
+    border: solid 5px #1e1e1e;
+    min-height: 100%;
 }
 
-.wp-block-lazyblock-address {
-    width: 100%;
-    display: flex;
-}
 
 .contact-info-headline, .contact-form-headline {
     text-align: center;
     font-size: 30px;
-    padding: 1rem 0;
+    padding-bottom: 1rem;
     font-family: "franklin-gothic-urw", sans-serif;
     font-weight: 500;
+    color: #f2f2f2;
 }
 
-.about-contact-column p {
+.contact-text-box, .contact-info-outer-box {
+    padding: 0.5rem 0.5rem;
+}
+
+.contact-info p {
     font-size: 18px;
     padding-bottom: 1.5rem;
 }
 
-.contact-info-box a {
+.contact-info a {
     color: #f2f2f2;
 }
 
-.contact-form {
-    width: 50%;
-    padding: 1rem;
+.contact-info {
+    background-color: #464646;
+    color: #f2f2f2;
+    padding: 1rem 5rem;
+}
+
+.contact-form-box {
+    padding: 1rem 5rem;
+}
+
+.wpforms-container {
+    margin: 0!important;
 }
 
 .wpforms-field-label {
@@ -148,25 +136,21 @@ h1 {
     font-weight: 400;
 }
 
-@media (max-width: 1500px) {
-    .img-text-box {
-        flex-direction: column-reverse;
-        justify-content: center;
-    }
-    
-    .image-box {
-        width: 80vw;
-    }
-    
-    .text-area {
-        width: 80vw;
-    }
+
+.three-image-box {
+    min-height: 100%;
 }
 
-@media (max-width: 1200px) {
-    .about-columns {
-        flex-direction: column;
-    }
+.two-image-box {
+    max-height: 50%;
+}
+
+.image-medium {
+    max-height: 50%;
+}
+
+.image-small {
+    width: 100%;
 }
 
 </style>
