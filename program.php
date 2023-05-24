@@ -1,15 +1,18 @@
 <?php 
+// Template Name: Programside // 
 get_header();
+?>
 
+<?php
 if( have_posts() ) :
     while( have_posts() ) :
         the_post();
         get_template_part( 'template-parts/post/content' );
     endwhile;    
 endif;
-
-get_footer();
 ?>
+
+<?php get_footer(); ?>
 
 <!-- CSS -->
 
@@ -17,6 +20,7 @@ get_footer();
 
 body {
     background-color: #141414;
+    padding: 0 100px;
 }
 
 .entry-title {
@@ -32,14 +36,17 @@ h1 {
     color: #f2f2f2;
 }
 
+.wp-block-lazyblock-program-event {
+}
+
 .event-box {
-  width: 1000px;
-  min-height: 250px;
-  background: green;
+  width: 100%;
+  height: 350px;
+  background: #464646;
 
   /* top left - bottom right */        
-  -webkit-clip-path: polygon(0 15%, 0 100%, 95% 100%, 100% 85%, 100% 0, 5% 0);
-  clip-path: polygon(0 15%, 0 100%, 95% 100%, 100% 85%, 100% 0, 5% 0);
+  -webkit-clip-path: polygon(0 25%, 0 100%, 95% 100%, 100% 75%, 100% 0, 05% 0);
+  clip-path: polygon(0 25%, 0 100%, 95% 100%, 100% 75%, 100% 0, 05% 0);
 
   /* top right - bottom left */
   /* -webkit-clip-path: polygon(0px 0px, 0px 85%, 5% 100%, 100% 100%, 100% 15%, 95% 0);
@@ -49,41 +56,91 @@ h1 {
 
   display: flex;
   align-items: center;
-  margin: 5rem;
+  margin: 2rem 0;
 }
 
 .image-box {
-    width: 50%;
-    height: 250px;
+    width: 40%;
+    height: 100%;
     overflow: hidden;
     padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 img {
     width: 100%;
-    height: 250px;
+    min-height: 100%;
     object-fit: cover;
 }
 
 .text-area {
-    width: 50%;
+    width: 60%;
     padding: 1rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.time {
-    display: flex;
-    align-items: center;
+.description {
+
 }
 
-.tid, .dato {
-    width: 50%;
-    height: fit-content;
+.event-headline {
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 1rem;
+    font-family: "franklin-gothic-urw", sans-serif;
+    font-weight: 600;
+    color: #141414;
+    text-shadow: 0 0 10px #f2f2f2;
+}
+
+.event-time {
+    color: #f2f2f2;
+    padding: 0.5rem 5rem;
+    text-align: center;
+    font-size: 20px;
+}
+
+.event-description {
+    color: #f2f2f2;
+    padding: 1rem 5rem;
+    font-size: 18px;
+}
+
+.tag {
+    color: #f2f2f2;
 }
 
 .button-box {
     padding: 1rem;
+}
+
+.event-btn {
+    padding: 0.8rem;
+    -webkit-clip-path: polygon(0 25%, 0 100%, 85% 100%, 100% 75%, 100% 0, 15% 0);
+    clip-path: polygon(0 25%, 0 100%, 85% 100%, 100% 75%, 100% 0, 15% 0);
+    margin: 0 1rem;
+    border: none;
+    width: 120px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.read-more {
+    background-color: #f2f2f2;
+    color: #141414;
+    
+}
+
+.buy-ticket {
+    background-color: #141414;
+    color: #f2f2f2;
+}
+
+.read-more:hover, .buy-ticket:hover {
+    opacity: 70%;
 }
